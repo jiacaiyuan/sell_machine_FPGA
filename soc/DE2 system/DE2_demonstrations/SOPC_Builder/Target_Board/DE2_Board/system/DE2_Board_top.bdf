@@ -1,0 +1,294 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.3"))
+(pin
+	(input)
+	(rect 336 320 504 336)
+	(text "INPUT" (rect 133 0 169 13)(font "Arial" (font_size 6)))
+	(text "CLOCK_50" (rect 9 0 83 15)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 160 20)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 336 336 504 352)
+	(text "INPUT" (rect 133 0 169 13)(font "Arial" (font_size 6)))
+	(text "KEY[0]" (rect 9 0 51 15)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 160 20)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 1000 328 1176 344)
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "FL_CE_N" (rect 90 0 153 15)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 1000 376 1176 392)
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "FL_OE_N" (rect 90 0 153 15)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 1000 392 1176 408)
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "FL_WE_N" (rect 90 0 156 15)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 1000 432 1176 448)
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "FL_RST_N" (rect 90 0 161 15)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 1000 344 1198 360)
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "FL_ADDR[21..0]" (rect 90 0 193 15)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(bidir)
+	(rect 1000 360 1176 376)
+	(text "BIDIR" (rect 1 0 32 13)(font "Arial" (font_size 6)))
+	(text "FL_DQ[7..0]" (rect 90 0 166 15)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4)(line_width 1))
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 56 12)(pt 78 12)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+		(line (pt 56 4)(pt 52 8)(line_width 1))
+		(line (pt 52 8)(pt 56 12)(line_width 1))
+	)
+	(text "VCC" (rect 4 7 28 20)(font "Arial" (font_size 6)))
+)
+(symbol
+	(rect 536 296 720 392)
+	(text "delay_reset_block" (rect 5 0 128 16)(font "Arial" (font_size 8)))
+	(text "inst3" (rect 8 80 39 95)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock_in" (rect 0 0 56 16)(font "Arial" (font_size 8)))
+		(text "clock_in" (rect 21 27 77 43)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset_n" (rect 0 0 50 16)(font "Arial" (font_size 8)))
+		(text "reset_n" (rect 21 43 71 59)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "delayed_reset_n" (rect 0 0 112 16)(font "Arial" (font_size 8)))
+		(text "delayed_reset_n" (rect 74 27 186 43)(font "Arial" (font_size 8)))
+		(line (pt 184 32)(pt 168 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 80)(line_width 1))
+	)
+)
+(symbol
+	(rect 736 256 1000 432)
+	(text "DE2_Board" (rect 4 0 104 19)(font "Arial" (font_size 10)))
+	(text "inst" (rect 4 160 27 175)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk " (rect 0 0 24 16)(font "Arial" (font_size 8)))
+		(text "clk " (rect 20 25 44 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset_n " (rect 0 0 55 16)(font "Arial" (font_size 8)))
+		(text "reset_n " (rect 20 41 75 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 264 80)
+		(output)
+		(text "select_n_to_the_cfi_flash_0 " (rect 0 0 193 16)(font "Arial" (font_size 8)))
+		(text "select_n_to_the_cfi_flash_0 " (rect 103 73 296 89)(font "Arial" (font_size 8)))
+		(line (pt 248 80)(pt 264 80)(line_width 1))
+	)
+	(port
+		(pt 264 96)
+		(output)
+		(text "tri_state_bridge_0_address[21..0] " (rect 0 0 232 16)(font "Arial" (font_size 8)))
+		(text "tri_state_bridge_0_address[21..0] " (rect 73 89 305 105)(font "Arial" (font_size 8)))
+		(line (pt 248 96)(pt 264 96)(line_width 3))
+	)
+	(port
+		(pt 264 128)
+		(output)
+		(text "tri_state_bridge_0_readn " (rect 0 0 172 16)(font "Arial" (font_size 8)))
+		(text "tri_state_bridge_0_readn " (rect 115 121 287 137)(font "Arial" (font_size 8)))
+		(line (pt 248 128)(pt 264 128)(line_width 1))
+	)
+	(port
+		(pt 264 144)
+		(output)
+		(text "write_n_to_the_cfi_flash_0 " (rect 0 0 184 16)(font "Arial" (font_size 8)))
+		(text "write_n_to_the_cfi_flash_0 " (rect 108 137 292 153)(font "Arial" (font_size 8)))
+		(line (pt 248 144)(pt 264 144)(line_width 1))
+	)
+	(port
+		(pt 264 112)
+		(bidir)
+		(text "tri_state_bridge_0_data[7..0] " (rect 0 0 199 16)(font "Arial" (font_size 8)))
+		(text "tri_state_bridge_0_data[7..0] " (rect 97 105 296 121)(font "Arial" (font_size 8)))
+		(line (pt 248 112)(pt 264 112)(line_width 3))
+	)
+	(drawing
+		(line (pt 16 64)(pt 247 64)(color 0 0 0)(dotted)(line_width 1))
+		(rectangle (rect 16 16 248 160)(line_width 1))
+	)
+)
+(connector
+	(pt 720 328)
+	(pt 728 328)
+)
+(connector
+	(pt 736 304)
+	(pt 728 304)
+)
+(connector
+	(pt 736 288)
+	(pt 528 288)
+)
+(connector
+	(pt 528 288)
+	(pt 528 328)
+)
+(connector
+	(pt 536 344)
+	(pt 504 344)
+)
+(connector
+	(pt 504 328)
+	(pt 528 328)
+)
+(connector
+	(pt 528 328)
+	(pt 536 328)
+)
+(connector
+	(pt 728 440)
+	(pt 1000 440)
+)
+(connector
+	(pt 728 304)
+	(pt 728 328)
+)
+(connector
+	(pt 728 328)
+	(pt 728 440)
+)
+(junction (pt 528 328))
+(junction (pt 728 328))
+(text "Target Board Design" (rect 736 224 967 248)(font "Arial" (color 0 0 0)(font_size 12)(bold)))
+(text "the NiosII Flash Programmer to custom boards." (rect -72 248 309 267)(font "Times New Roman" (font_size 10)))
+(text "This design has been created by the mk_target_board utility." (rect -88 56 392 75)(font "Times New Roman" (font_size 10)))
+(text "The mk_target_board utility creates generic board components" (rect -88 72 415 91)(font "Times New Roman" (font_size 10)))
+(text "programming on custom boards." (rect -72 104 186 123)(font "Times New Roman" (font_size 10)))
+(text "and flash programmer designs to be used later during flash" (rect -72 88 394 107)(font "Times New Roman" (font_size 10)))
+(text "Ultimately, the design will be downloaded to the FPGA on a" (rect -88 120 391 139)(font "Times New Roman" (font_size 10)))
+(text "custom board as the first step in programming flash on that board." (rect -72 136 453 155)(font "Times New Roman" (font_size 10)))
+(text "When first created by mk_target_board, this design will have no" (rect -88 152 422 171)(font "Times New Roman" (font_size 10)))
+(text "connections to flash.  Before being used to program flash," (rect -72 168 392 187)(font "Times New Roman" (font_size 10)))
+(text "it must be modified by the board designer to reflect the flash" (rect -72 184 414 203)(font "Times New Roman" (font_size 10)))
+(text "connections on the board.  It is important that you consult" (rect -72 200 389 219)(font "Times New Roman" (font_size 10)))
+(text "the document \"NiosII Flash Programmer User Guide\"," (rect -72 216 358 235)(font "Times New Roman" (font_size 10)))
+(text "available at www.altera.com, before attempting to port" (rect -72 232 361 251)(font "Times New Roman" (font_size 10)))
+(text "Flash Programmer Design (Custom Board)" (rect -88 24 385 48)(font "Arial" (font_size 12)(bold)))

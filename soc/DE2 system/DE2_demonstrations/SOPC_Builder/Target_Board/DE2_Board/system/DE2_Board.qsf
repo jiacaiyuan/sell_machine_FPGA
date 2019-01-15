@@ -1,0 +1,124 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic       
+# functions, and any output files any of the foregoing           
+# (including device programming or simulation files), and any    
+# associated documentation or information are expressly subject  
+# to the terms and conditions of the Altera Program License      
+# Subscription Agreement, Altera MegaCore Function License       
+# Agreement, or other applicable license agreement, including,   
+# without limitation, that your use is for the sole purpose of   
+# programming logic devices manufactured by Altera and sold by   
+# Altera or its authorized distributors.  Please refer to the    
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		DE2_Board_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.0
+set_global_assignment -name BDF_FILE DE2_Board_top.bdf
+set_global_assignment -name LAST_QUARTUS_VERSION 5.1
+set_global_assignment -name VERILOG_FILE BT_SWAP.v
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_AC18 -to FL_ADDR[0]
+set_location_assignment PIN_AB18 -to FL_ADDR[1]
+set_location_assignment PIN_AE19 -to FL_ADDR[2]
+set_location_assignment PIN_AF19 -to FL_ADDR[3]
+set_location_assignment PIN_AE18 -to FL_ADDR[4]
+set_location_assignment PIN_AF18 -to FL_ADDR[5]
+set_location_assignment PIN_Y16 -to FL_ADDR[6]
+set_location_assignment PIN_AA16 -to FL_ADDR[7]
+set_location_assignment PIN_AD17 -to FL_ADDR[8]
+set_location_assignment PIN_AC17 -to FL_ADDR[9]
+set_location_assignment PIN_AE17 -to FL_ADDR[10]
+set_location_assignment PIN_AF17 -to FL_ADDR[11]
+set_location_assignment PIN_W16 -to FL_ADDR[12]
+set_location_assignment PIN_W15 -to FL_ADDR[13]
+set_location_assignment PIN_AC16 -to FL_ADDR[14]
+set_location_assignment PIN_AD16 -to FL_ADDR[15]
+set_location_assignment PIN_AE16 -to FL_ADDR[16]
+set_location_assignment PIN_AC15 -to FL_ADDR[17]
+set_location_assignment PIN_AB15 -to FL_ADDR[18]
+set_location_assignment PIN_AA15 -to FL_ADDR[19]
+set_location_assignment PIN_V17 -to FL_CE_N
+set_location_assignment PIN_W17 -to FL_OE_N
+set_location_assignment PIN_AD19 -to FL_DQ[0]
+set_location_assignment PIN_AC19 -to FL_DQ[1]
+set_location_assignment PIN_AF20 -to FL_DQ[2]
+set_location_assignment PIN_AE20 -to FL_DQ[3]
+set_location_assignment PIN_AB20 -to FL_DQ[4]
+set_location_assignment PIN_AC20 -to FL_DQ[5]
+set_location_assignment PIN_AF21 -to FL_DQ[6]
+set_location_assignment PIN_AE21 -to FL_DQ[7]
+set_location_assignment PIN_AA18 -to FL_RST_N
+set_location_assignment PIN_AA17 -to FL_WE_N
+set_location_assignment PIN_N2 -to CLOCK_50
+set_location_assignment PIN_G26 -to KEY[0]
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name TOP_LEVEL_ENTITY DE2_Board_top
+set_global_assignment -name FAMILY "Cyclone II"
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name STRATIX_CONFIGURATION_SCHEME "FAST PASSIVE PARALLEL"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS OUTPUT DRIVING AN UNSPECIFIED SIGNAL"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD LVTTL
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[5]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[6]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[7]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[8]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[9]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[10]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[11]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[12]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[13]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[14]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[15]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[16]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[17]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_CE_N
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_OE_N
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[5]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[6]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_DQ[7]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_RST_N
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_WE_N
+set_instance_assignment -name IO_STANDARD LVTTL -to CLOCK_50
+set_instance_assignment -name IO_STANDARD LVTTL -to KEY[0]
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+
+set_location_assignment PIN_Y15 -to FL_ADDR[20]
+set_location_assignment PIN_Y14 -to FL_ADDR[21]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[20]
+set_instance_assignment -name IO_STANDARD LVTTL -to FL_ADDR[21]

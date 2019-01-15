@@ -1,0 +1,105 @@
+Altera SOPC Builder Version 9.00 Build 132
+Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
+
+
+# 2018.03.21 20:47:07 (*) mk_custom_sdk starting
+# 2018.03.21 20:47:07 (*) Reading project C:/Users/Dell/Desktop/sell_soft/KERNEL.ptf.
+
+# 2018.03.21 20:47:08 (*) Finding all CPUs
+# 2018.03.21 20:47:08 (*) Finding all available components
+# 2018.03.21 20:47:08 (*) Reading C:/Users/Dell/Desktop/sell_soft/.sopc_builder/install.ptf
+
+# 2018.03.21 20:47:08 (*) Found 67 components
+
+# 2018.03.21 20:47:09 (*) Finding all peripherals
+
+# 2018.03.21 20:47:09 (*) Finding software components
+
+# 2018.03.21 20:47:09 (*) (Legacy SDK Generation Skipped)
+# 2018.03.21 20:47:09 (*) (All TCL Script Generation Skipped)
+# 2018.03.21 20:47:09 (*) (No Libraries Built)
+# 2018.03.21 20:47:09 (*) (Contents Generation Skipped)
+# 2018.03.21 20:47:09 (*) mk_custom_sdk finishing
+
+# 2018.03.21 20:47:09 (*) Starting generation for system: KERNEL.
+
+.
+.
+...
+....
+.....
+..
+
+# 2018.03.21 20:47:11 (*) Running Generator Program for cpu
+
+# 2018.03.21 20:47:13 (*)   Checking for plaintext license.
+# 2018.03.21 20:47:13 (*)   Plaintext license not found.
+# 2018.03.21 20:47:13 (*)   Checking for encrypted license (non-evaluation).
+# 2018.03.21 20:47:13 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2018.03.21 20:47:13 (*)   Getting CPU configuration settings
+# 2018.03.21 20:47:13 (*)   Elaborating CPU configuration settings
+# 2018.03.21 20:47:13 (*)   Creating all objects for CPU
+# 2018.03.21 20:47:13 (*)     Testbench
+
+# 2018.03.21 20:47:14 (*)     Instruction decoding
+# 2018.03.21 20:47:14 (*)       Instruction fields
+# 2018.03.21 20:47:14 (*)       Instruction decodes
+# 2018.03.21 20:47:16 (*)       Signals for RTL simulation waveforms
+# 2018.03.21 20:47:16 (*)       Instruction controls
+# 2018.03.21 20:47:16 (*)     Pipeline frontend
+# 2018.03.21 20:47:16 (*)     Pipeline backend
+# 2018.03.21 20:47:22 (*)   Generating HDL from CPU objects
+# 2018.03.21 20:47:28 (*)   Creating encrypted HDL
+
+# 2018.03.21 20:47:31 (*) Running Generator Program for onchip_memory
+
+# 2018.03.21 20:47:33 (*) Running Generator Program for out_enough_money
+
+# 2018.03.21 20:47:34 (*) Running Generator Program for out_buy_success
+
+# 2018.03.21 20:47:36 (*) Running Generator Program for inp_the_goods
+
+# 2018.03.21 20:47:37 (*) Running Generator Program for inp_the_money
+
+# 2018.03.21 20:47:39 (*) Running Generator Program for inp_confirm_buy
+
+# 2018.03.21 20:47:41 (*) Running Generator Program for inp_buy_finish
+
+# 2018.03.21 20:47:42 (*) Running Generator Program for inp_cancel_buy
+
+# 2018.03.21 20:47:44 (*) Running Generator Program for out_hex7
+
+# 2018.03.21 20:47:45 (*) Running Generator Program for out_hex6
+
+# 2018.03.21 20:47:47 (*) Running Generator Program for out_hex5
+
+# 2018.03.21 20:47:48 (*) Running Generator Program for out_hex4
+
+# 2018.03.21 20:47:50 (*) Running Generator Program for out_hex2
+
+# 2018.03.21 20:47:52 (*) Running Generator Program for out_hex1
+
+# 2018.03.21 20:47:53 (*) Running Generator Program for out_hex0
+
+
+# 2018.03.21 20:47:54 (*) Making arbitration and system (top) modules.
+
+# 2018.03.21 20:48:05 (*) Generating Quartus symbol for top level: KERNEL
+
+# 2018.03.21 20:48:05 (*) Generating Symbol C:/Users/Dell/Desktop/sell_soft/KERNEL.bsf
+
+# 2018.03.21 20:48:05 (*) Creating command-line system-generation script: C:/Users/Dell/Desktop/sell_soft/KERNEL_generation_script
+
+# 2018.03.21 20:48:06 (*) Running setup for HDL simulator: modelsim
+
+
+# 2018.03.21 20:48:06 (*) Completed generation for system: KERNEL.
+# 2018.03.21 20:48:06 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : C:/Users/Dell/Desktop/sell_soft/KERNEL.ptf 
+  System HDL Model : C:/Users/Dell/Desktop/sell_soft/KERNEL.v 
+  System Generation Script : C:/Users/Dell/Desktop/sell_soft/KERNEL_generation_script 
+
+# 2018.03.21 20:48:06 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Successful - Tue Jul 25 22:56:31 2006
+Quartus II Version : 6.0 Build 202 06/20/2006 SP 1 SJ Full Version
+Revision Name : DE2_NIOS
+Top-level Entity Name : DE2_NIOS
+Family : Cyclone II
+Total logic elements : 5394
+Total registers : 3569
+Total pins : 429
+Total virtual pins : 0
+Total memory bits : 387,584
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 2

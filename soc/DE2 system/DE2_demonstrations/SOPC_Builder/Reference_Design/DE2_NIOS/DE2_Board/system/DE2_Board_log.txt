@@ -1,0 +1,130 @@
+Altera SOPC Builder Version 5.10 Build 176
+Copyright (c) 1999-2005 Altera Corporation.  All rights reserved.
+
+
+# 2005.11.17 16:18:39 (*) mk_custom_sdk starting
+# 2005.11.17 16:18:39 (*) Reading project C:/DE2/DE2_Board/system/DE2_Board.ptf.
+
+# 2005.11.17 16:18:40 (*) Finding all CPUs
+
+# 2005.11.17 16:18:40 (*) Finding all available components
+
+# 2005.11.17 16:18:40 (*) Reading C:/DE2/DE2_Board/system/.sopc_builder/install.ptf
+
+# 2005.11.17 16:18:40 (*) Found 52 components
+
+# 2005.11.17 16:18:41 (*) Finding all peripherals
+
+# 2005.11.17 16:18:41 (*) Finding software components
+
+# 2005.11.17 16:18:42 (*) (Legacy SDK Generation Skipped)
+# 2005.11.17 16:18:42 (*) (All TCL Script Generation Skipped)
+# 2005.11.17 16:18:42 (*) (No Libraries Built)
+# 2005.11.17 16:18:42 (*) (Contents Generation Skipped)
+# 2005.11.17 16:18:42 (*) mk_custom_sdk finishing
+
+# 2005.11.17 16:18:42 (*) Starting generation for system: DE2_Board.
+
+.
+..
+.
+.
+.
+.
+.
+.
+
+# 2005.11.17 16:18:44 (*) Running Generator Program for cpu_0
+
+# 2005.11.17 16:18:48 (*)   Checking for plaintext license.
+# 2005.11.17 16:18:52 (*)   Plaintext license not found.
+# 2005.11.17 16:18:52 (*)   Checking for encrypted license (non-evaluation).
+# 2005.11.17 16:18:52 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2005.11.17 16:18:59 (*)   Creating encrypted HDL
+
+# 2005.11.17 16:19:01 (*) Running Generator Program for firmware_ROM
+
+# 2005.11.17 16:19:03 (*) Running Generator Program for data_RAM
+
+# 2005.11.17 16:19:06 (*) Running Generator Program for payload_buffer
+
+# 2005.11.17 16:19:08 (*) Running Generator Program for jtag_uart_0
+
+# 2005.11.17 16:19:11 (*) Running Generator Program for sysid
+
+# 2005.11.17 16:19:13 (*) Running Generator Program for asmi
+
+# 2005.11.17 16:19:16 (*) Running Generator Program for Board_System
+
+# 2005.11.17 16:19:17 (*) Now generating custom board component and flash programmer design.
+# 2005.11.17 16:19:17 (*) After generation is complete, you must do the following next steps:
+# 2005.11.17 16:19:17 (*)  1.) Update the system symbol in QuartusII
+# 2005.11.17 16:19:17 (*)  2.) Add flash pins to the .bdf schematic file and connect them to the flash
+# 2005.11.17 16:19:17 (*)       ports on the updated symbol.
+# 2005.11.17 16:19:17 (*)  3.) Add pins to the .bdf schematic file to dissable any other external devices
+
+# 2005.11.17 16:19:17 (*)       that are on the same tri-state bus as flash.
+# 2005.11.17 16:19:17 (*)   4.) Assign the schematic pins you added to the associated device pins that
+# 2005.11.17 16:19:17 (*)       connect to the external devices
+# 2005.11.17 16:19:17 (*)  5.) Compile the design in QuartusII.
+# 2005.11.17 16:19:17 (*) It is important that you consult the document "NiosII Flash Programmer User Guide",
+# 2005.11.17 16:19:17 (*)  available at www.altera.com, before attempting to port the NiosII Flash Programmer
+
+# 2005.11.17 16:19:17 (*)  to custom boards.
+
+
+# 2005.11.17 16:19:18 (*) Running Generator Program for cfi_flash_0
+
+
+# 2005.11.17 16:19:19 (*) Making arbitration and system (top) modules.
+
+# 2005.11.17 16:19:27 (*) Generating Quartus symbol for top level: DE2_Board
+
+# 2005.11.17 16:19:27 (*) Generating Symbol C:/DE2/DE2_Board/system/DE2_Board.bsf
+
+# 2005.11.17 16:19:27 (*) Creating command-line system-generation script: C:/DE2/DE2_Board/system/DE2_Board_generation_script
+
+# 2005.11.17 16:19:27 (*) Running setup for HDL simulator: modelsim
+
+
+# 2005.11.17 16:19:27 (*) Setting up Quartus with DE2_Board_setup_quartus.tcl
+c:/altera/quartus51/bin/quartus_sh -t DE2_Board_setup_quartus.tcl
+
+
+Info: *******************************************************************
+Info: Running Quartus II Shell
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Copyright (C) 1991-2005 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Nov 17 16:19:28 2005
+Info: Command: quartus_sh -t DE2_Board_setup_quartus.tcl
+
+
+Info: Evaluation of Tcl script DE2_Board_setup_quartus.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu Nov 17 16:19:28 2005
+    Info: Elapsed time: 00:00:00
+
+# 2005.11.17 16:19:29 (*) Completed generation for system: DE2_Board.
+# 2005.11.17 16:19:29 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : C:/DE2/DE2_Board/system/DE2_Board.ptf 
+  System HDL Model : C:/DE2/DE2_Board/system/DE2_Board.v 
+  System Generation Script : C:/DE2/DE2_Board/system/DE2_Board_generation_script 
+
+# 2005.11.17 16:19:29 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

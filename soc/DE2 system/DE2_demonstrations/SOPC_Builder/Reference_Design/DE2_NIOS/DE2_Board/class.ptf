@@ -1,0 +1,52 @@
+CLASS DE2_Board
+{
+   BOARD_DEFAULTS
+   {
+      CONFIGURATION EPSC16
+      {
+         length = "";
+         menu_position = "1";
+         offset = "0x00000000";
+         reference_designator = "U30";
+      }
+      CONFIGURATION FLASH
+      {
+         length = "";
+         menu_position = "2";
+         offset = "0x00000000";
+         reference_designator = "U20";
+      }
+      JTAG_device_index = "1";
+      REFDES U20
+      {
+         base = "0x00400000";
+      }
+      REFDES U30
+      {
+         base = "0x00060000";
+      }
+      altera_avalon_cfi_flash
+      {
+         reference_designators = "U20";
+      }
+      altera_avalon_epcs_flash_controller
+      {
+         reference_designators = "U30";
+      }
+      class = "DE2_Board";
+      class_version = "1.0";
+      device_family = "CYCLONEII";
+      quartus_pgm_file = "system/DE2_Board.sof";
+      quartus_project_file = "system/DE2_Board.qpf";
+      reference_designators = "U30,U20";
+      sopc_system_file = "system/DE2_Board.ptf";
+   }
+   USER_INTERFACE
+   {
+      USER_LABELS
+      {
+         name = "DE2_Board";
+      }
+   }
+   type = "board";
+}

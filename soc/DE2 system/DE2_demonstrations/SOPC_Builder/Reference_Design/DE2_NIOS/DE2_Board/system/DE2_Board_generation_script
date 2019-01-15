@@ -1,0 +1,5 @@
+#!/bin/sh
+
+c:/altera/quartus51//bin/perl561/bin/perl -I$sopc_builder/bin -I$sopc_builder/bin/perl_lib -I$sopc_builder/bin/europa $sopc_builder/bin/ptf_update.pl DE2_Board.ptf 
+
+c:/altera/quartus51//bin/perl561/bin/perl -I$sopc_builder/bin -I$sopc_builder/bin/perl_lib -I$sopc_builder/bin/europa $sopc_builder/bin/mk_systembus.pl --sopc_directory=$sopc_builder --sopc_perl=c:/altera/quartus51//bin/perl561 --sopc_lib_path="C:/DE2/DE2_Board/system+c:/altera/kits/nios2_51/components+C:/altera/quartus51/sopc_builder/components+c:/altera/kits/nios2_51/components" --target_module_name=DE2_Board --system_directory=C:/DE2/DE2_Board/system --system_name=DE2_Board --project_name=DE2_Board --sopc_quartus_dir= $1

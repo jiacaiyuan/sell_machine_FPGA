@@ -1,0 +1,151 @@
+Altera SOPC Builder Version 6.00 Build 202
+Copyright (c) 1999-2006 Altera Corporation.  All rights reserved.
+
+
+# 2006.07.25 22:50:08 (*) mk_custom_sdk starting
+# 2006.07.25 22:50:08 (*) Reading project C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/system_0.ptf.
+
+# 2006.07.25 22:50:08 (*) Finding all CPUs
+# 2006.07.25 22:50:08 (*) Finding all available components
+# 2006.07.25 22:50:08 (*) Reading C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/.sopc_builder/install.ptf
+
+# 2006.07.25 22:50:08 (*) Found 60 components
+
+# 2006.07.25 22:50:09 (*) Finding all peripherals
+
+# 2006.07.25 22:50:10 (*) Finding software components
+
+# 2006.07.25 22:50:11 (*) (Legacy SDK Generation Skipped)
+# 2006.07.25 22:50:11 (*) (All TCL Script Generation Skipped)
+# 2006.07.25 22:50:11 (*) (No Libraries Built)
+# 2006.07.25 22:50:11 (*) (Contents Generation Skipped)
+# 2006.07.25 22:50:11 (*) mk_custom_sdk finishing
+
+# 2006.07.25 22:50:11 (*) Starting generation for system: system_0.
+
+.
+.
+.
+.
+.
+.
+...
+....
+.
+.
+.
+.
+.
+......
+
+# 2006.07.25 22:50:15 (*) Running Generator Program for cpu_0
+
+# 2006.07.25 22:50:18 (*)   Checking for plaintext license.
+# 2006.07.25 22:50:18 (*)   Plaintext license not found.
+# 2006.07.25 22:50:18 (*)   Checking for encrypted license (non-evaluation).
+# 2006.07.25 22:50:18 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2006.07.25 22:50:36 (*)   Creating encrypted HDL
+
+# 2006.07.25 22:50:41 (*) Running Generator Program for cfi_flash_0
+
+# 2006.07.25 22:50:43 (*) Running Generator Program for sdram_0
+
+# 2006.07.25 22:50:46 (*) Running Generator Program for epcs_controller
+
+# 2006.07.25 22:50:48 (*) Running Generator Program for jtag_uart_0
+
+# 2006.07.25 22:50:50 (*) Running Generator Program for uart_0
+
+# 2006.07.25 22:50:53 (*) Running Generator Program for timer_0
+
+# 2006.07.25 22:50:55 (*) Running Generator Program for timer_1
+
+# 2006.07.25 22:50:57 (*) Running Generator Program for lcd_16207_0
+
+# 2006.07.25 22:50:59 (*) Running Generator Program for led_red
+
+# 2006.07.25 22:51:01 (*) Running Generator Program for led_green
+
+# 2006.07.25 22:51:03 (*) Running Generator Program for button_pio
+
+# 2006.07.25 22:51:05 (*) Running Generator Program for switch_pio
+
+# 2006.07.25 22:51:08 (*) Running Generator Program for SEG7_Display
+
+# 2006.07.25 22:51:12 (*) Running Generator Program for sram_0
+
+# 2006.07.25 22:51:17 (*) Running Generator Program for DM9000A
+
+# 2006.07.25 22:51:21 (*) Running Generator Program for ISP1362
+
+# 2006.07.25 22:51:25 (*) Running Generator Program for VGA_0
+
+# 2006.07.25 22:51:30 (*) Running Generator Program for Audio_0
+
+# 2006.07.25 22:51:35 (*) Running Generator Program for SD_DAT
+
+# 2006.07.25 22:51:37 (*) Running Generator Program for SD_CMD
+
+# 2006.07.25 22:51:39 (*) Running Generator Program for SD_CLK
+
+# 2006.07.25 22:51:41 (*) Running Generator Program for clock_0
+
+# 2006.07.25 22:51:44 (*) Running Generator Program for clock_1
+
+.
+
+# 2006.07.25 22:51:46 (*) Running Test Generator Program for sdram_0
+
+# 2006.07.25 22:51:48 (*) Making arbitration and system (top) modules.
+
+
+WARNING:
+Should not have Active_CS_Through_Read_Latency set without setting some Read_Latency. at c:/altera/quartus60/sopc_builder/bin/europa/europa_utils.pm line 248.
+
+# 2006.07.25 22:53:13 (*) Generating Quartus symbol for top level: system_0
+
+# 2006.07.25 22:53:13 (*) Generating Symbol C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/system_0.bsf
+
+# 2006.07.25 22:53:13 (*) Creating command-line system-generation script: C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/system_0_generation_script
+
+# 2006.07.25 22:53:13 (*) Running setup for HDL simulator: modelsim
+
+
+# 2006.07.25 22:53:13 (*) Setting up Quartus with system_0_setup_quartus.tcl
+c:/altera/quartus60/bin/quartus_sh -t system_0_setup_quartus.tcl
+
+
+Info: *******************************************************************
+Info: Running Quartus II Shell
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Full Version
+    Info: Copyright (C) 1991-2006 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Ple
+ase refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jul 25 22:53:14 2006
+Info: Command: quartus_sh -t system_0_setup_quartus.tcl
+Info: Evaluation of Tcl script system_0_setup_quartus.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Processing ended: Tue Jul 25 22:53:14 2006
+    Info: Elapsed time: 00:00:01
+
+# 2006.07.25 22:53:14 (*) Completed generation for system: system_0.
+# 2006.07.25 22:53:14 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/system_0.ptf 
+  System HDL Model : C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/system_0.v 
+  System Generation Script : C:/DE2/SOPC_Builder/Reference_Design/DE2_NIOS/system_0_generation_script 
+
+# 2006.07.25 22:53:14 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

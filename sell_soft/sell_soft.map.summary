@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Mar 21 21:00:24 2018
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : sell_soft
+Top-level Entity Name : sell_soft
+Family : Cyclone II
+Total logic elements : 2,546
+    Total combinational functions : 2,076
+    Dedicated logic registers : 1,470
+Total registers : 1470
+Total pins : 62
+Total virtual pins : 0
+Total memory bits : 307,200
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 0

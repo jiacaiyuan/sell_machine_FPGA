@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sell_soft">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_bht_module:cpu_bht|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_pkf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_ic_data_module:cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_qed1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_ic_tag_module:cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_u0g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_mult_cell:the_cpu_mult_cell|altmult_add:the_altmult_add_part_2" CBX_FILE_NAME="mult_add_6cr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_oci_im:the_cpu_nios2_oci_im|cpu_traceram_lpm_dram_bdp_component_module:cpu_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_ocimem:the_cpu_nios2_ocimem|cpu_ociram_lpm_dram_bdp_component_module:cpu_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_t072.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_register_bank_a_module:cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_p2f1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_register_bank_b_module:cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_q2f1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|cpu:the_cpu|cpu_mult_cell:the_cpu_mult_cell|altmult_add:the_altmult_add_part_1" CBX_FILE_NAME="mult_add_4cr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sell_soft|KERNEL:inst|onchip_memory:the_onchip_memory|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_bub1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

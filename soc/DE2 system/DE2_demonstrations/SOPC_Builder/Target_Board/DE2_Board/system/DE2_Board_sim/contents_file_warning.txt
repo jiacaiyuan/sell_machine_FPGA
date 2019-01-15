@@ -1,0 +1,9 @@
+
+Warning: simulation may not function properly until valid contents files
+are created for the following memory modules:
+
+	data_RAM
+	payload_buffer
+
+You can create valid contents files for these memories by building a software
+project in the NiosII IDE.
