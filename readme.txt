@@ -9,6 +9,7 @@ led_soft: light LED in FPGA--hardware
 led_soft_nios: light LED in NIOS2 IDE--software
 
 sell_soft: sell machine in the version of software----hardware config
+sell_soft_nios: the software in the sell machine-----software
 
 avalon_sis: sell machine in a IP add in the avalon_bus-----hardware
 avalon_sis_nios:  the software in NIOS2--------------------software
