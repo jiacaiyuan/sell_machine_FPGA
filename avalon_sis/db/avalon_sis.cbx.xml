@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="avalon_sis">
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|vendor3_top_3_0:the_vendor3_top_3_0|vendor3_top:vendor3_top_3_0|vendor3:vendor3_top|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_scm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|vendor3_top_3_0:the_vendor3_top_3_0|vendor3_top:vendor3_top_3_0|vendor3:vendor3_top|lpm_divide:Mod4" CBX_FILE_NAME="lpm_divide_25m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_bht_module:cpu_bht|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_pkf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_oci_im:the_cpu_nios2_oci_im|cpu_traceram_lpm_dram_bdp_component_module:cpu_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_ocimem:the_cpu_nios2_ocimem|cpu_ociram_lpm_dram_bdp_component_module:cpu_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_t072.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_register_bank_a_module:cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_p2f1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|vendor3_top_3_0:the_vendor3_top_3_0|vendor3_top:vendor3_top_3_0|vendor3:vendor3_top|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_25m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_mult_cell:the_cpu_mult_cell|altmult_add:the_altmult_add_part_1" CBX_FILE_NAME="mult_add_4cr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|onchip_memory:the_onchip_memory|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_bub1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|vendor3_top_3_0:the_vendor3_top_3_0|vendor3_top:vendor3_top_3_0|vendor3:vendor3_top|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_v4m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_ic_data_module:cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_qed1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_ic_tag_module:cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_u0g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_mult_cell:the_cpu_mult_cell|altmult_add:the_altmult_add_part_2" CBX_FILE_NAME="mult_add_6cr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|cpu:the_cpu|cpu_register_bank_b_module:cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_q2f1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|vendor3_top_3_0:the_vendor3_top_3_0|vendor3_top:vendor3_top_3_0|vendor3:vendor3_top|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vcm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|avalon_sis|KERNEL:inst|vendor3_top_3_0:the_vendor3_top_3_0|vendor3_top:vendor3_top_3_0|vendor3:vendor3_top|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_25m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,9 @@
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) vendor3.v]
+ set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) leddisplay.v]
+ set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu.sdc]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) vendor3_top_3_0.v]
+ set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) vendor3_top.v]
+ set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) uppulsecheck.v]
+ set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) vendor3_top_hw.tcl]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 005056C00001000001628A70FBA6 
+ 
