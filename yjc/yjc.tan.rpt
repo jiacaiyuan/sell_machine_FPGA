@@ -1,0 +1,760 @@
+Classic Timing Analyzer report for yjc
+Sun Apr 01 09:56:09 2018
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK_27'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                    ;
++------------------------------+-------+---------------+----------------------------------+---------------------+---------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                ; To                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------+---------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.797 ns                         ; SW[17]              ; current_state.idle  ; --         ; CLOCK_27 ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 14.295 ns                        ; change_money[2]     ; HEX1[5]             ; CLOCK_27   ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 9.868 ns                         ; SW[14]              ; LEDR[14]            ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 2.419 ns                         ; SW[10]              ; given_money_temp[0] ; --         ; CLOCK_27 ; 0            ;
+; Clock Setup: 'CLOCK_27'      ; N/A   ; None          ; 298.78 MHz ( period = 3.347 ns ) ; given_money_temp[1] ; given_money_temp[5] ; CLOCK_27   ; CLOCK_27 ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                     ;                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------+---------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK_27        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK_27'                                                                                                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+----------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                 ; To                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 298.78 MHz ( period = 3.347 ns )                    ; given_money_temp[1]  ; given_money_temp[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 3.133 ns                ;
+; N/A                                     ; 306.94 MHz ( period = 3.258 ns )                    ; sep_clk[8]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.517 ns                ;
+; N/A                                     ; 307.13 MHz ( period = 3.256 ns )                    ; given_money_temp[1]  ; given_money_temp[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 3.042 ns                ;
+; N/A                                     ; 307.13 MHz ( period = 3.256 ns )                    ; given_money_temp[2]  ; given_money_temp[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 3.042 ns                ;
+; N/A                                     ; 308.64 MHz ( period = 3.240 ns )                    ; sep_clk[11]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.499 ns                ;
+; N/A                                     ; 309.31 MHz ( period = 3.233 ns )                    ; sep_clk[0]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 3.018 ns                ;
+; N/A                                     ; 310.37 MHz ( period = 3.222 ns )                    ; sep_clk[9]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.481 ns                ;
+; N/A                                     ; 310.95 MHz ( period = 3.216 ns )                    ; given_money_temp[0]  ; given_money_temp[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 3.001 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; sep_clk[1]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; given_money_temp[3]  ; given_money_temp[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.970 ns                ;
+; N/A                                     ; 315.86 MHz ( period = 3.166 ns )                    ; given_money_temp[2]  ; given_money_temp[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 316.26 MHz ( period = 3.162 ns )                    ; sep_clk[0]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.947 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; sep_clk[6]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.397 ns                ;
+; N/A                                     ; 318.78 MHz ( period = 3.137 ns )                    ; given_money_temp[0]  ; given_money_temp[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.922 ns                ;
+; N/A                                     ; 319.18 MHz ( period = 3.133 ns )                    ; given_money_temp[4]  ; given_money_temp[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.919 ns                ;
+; N/A                                     ; 319.80 MHz ( period = 3.127 ns )                    ; sep_clk[1]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.912 ns                ;
+; N/A                                     ; 319.90 MHz ( period = 3.126 ns )                    ; sep_clk[2]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 322.48 MHz ( period = 3.101 ns )                    ; given_money_temp[1]  ; given_money_temp[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.887 ns                ;
+; N/A                                     ; 322.68 MHz ( period = 3.099 ns )                    ; sep_clk[5]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.358 ns                ;
+; N/A                                     ; 323.00 MHz ( period = 3.096 ns )                    ; given_money_temp[3]  ; given_money_temp[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.882 ns                ;
+; N/A                                     ; 323.52 MHz ( period = 3.091 ns )                    ; sep_clk[0]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.876 ns                ;
+; N/A                                     ; 326.80 MHz ( period = 3.060 ns )                    ; given_money_temp[1]  ; given_money_temp[3]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 327.23 MHz ( period = 3.056 ns )                    ; sep_clk[1]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.841 ns                ;
+; N/A                                     ; 327.33 MHz ( period = 3.055 ns )                    ; sep_clk[2]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 330.69 MHz ( period = 3.024 ns )                    ; sep_clk[3]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.809 ns                ;
+; N/A                                     ; 331.13 MHz ( period = 3.020 ns )                    ; sep_clk[0]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.805 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; sep_clk[1]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.255 ns                ;
+; N/A                                     ; 334.22 MHz ( period = 2.992 ns )                    ; sep_clk[4]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.251 ns                ;
+; N/A                                     ; 335.01 MHz ( period = 2.985 ns )                    ; sep_clk[1]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.770 ns                ;
+; N/A                                     ; 335.12 MHz ( period = 2.984 ns )                    ; sep_clk[2]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.769 ns                ;
+; N/A                                     ; 336.25 MHz ( period = 2.974 ns )                    ; sep_clk[10]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.233 ns                ;
+; N/A                                     ; 336.70 MHz ( period = 2.970 ns )                    ; given_money_temp[0]  ; given_money_temp[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.70 MHz ( period = 2.970 ns )                    ; given_money_temp[2]  ; given_money_temp[3]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.756 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; sep_clk[0]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.223 ns                ;
+; N/A                                     ; 338.64 MHz ( period = 2.953 ns )                    ; sep_clk[3]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.738 ns                ;
+; N/A                                     ; 340.02 MHz ( period = 2.941 ns )                    ; given_money_temp[0]  ; given_money_temp[3]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.726 ns                ;
+; N/A                                     ; 343.29 MHz ( period = 2.913 ns )                    ; sep_clk[2]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.698 ns                ;
+; N/A                                     ; 344.59 MHz ( period = 2.902 ns )                    ; sep_clk[4]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.687 ns                ;
+; N/A                                     ; 345.30 MHz ( period = 2.896 ns )                    ; given_money_temp[0]  ; given_money_temp[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.681 ns                ;
+; N/A                                     ; 346.98 MHz ( period = 2.882 ns )                    ; sep_clk[3]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.667 ns                ;
+; N/A                                     ; 349.53 MHz ( period = 2.861 ns )                    ; sep_clk[0]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.646 ns                ;
+; N/A                                     ; 350.88 MHz ( period = 2.850 ns )                    ; sep_clk[3]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.109 ns                ;
+; N/A                                     ; 350.88 MHz ( period = 2.850 ns )                    ; sep_clk[7]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.109 ns                ;
+; N/A                                     ; 352.61 MHz ( period = 2.836 ns )                    ; sep_clk[15]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.096 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; sep_clk[4]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.86 MHz ( period = 2.826 ns )                    ; sep_clk[1]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.611 ns                ;
+; N/A                                     ; 355.75 MHz ( period = 2.811 ns )                    ; sep_clk[3]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.596 ns                ;
+; N/A                                     ; 356.38 MHz ( period = 2.806 ns )                    ; sep_clk[13]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.066 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; sep_clk[0]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.575 ns                ;
+; N/A                                     ; 358.55 MHz ( period = 2.789 ns )                    ; sep_clk[5]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.574 ns                ;
+; N/A                                     ; 362.19 MHz ( period = 2.761 ns )                    ; sep_clk[6]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.546 ns                ;
+; N/A                                     ; 362.32 MHz ( period = 2.760 ns )                    ; sep_clk[4]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.545 ns                ;
+; N/A                                     ; 362.98 MHz ( period = 2.755 ns )                    ; sep_clk[1]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.540 ns                ;
+; N/A                                     ; 363.11 MHz ( period = 2.754 ns )                    ; sep_clk[2]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.539 ns                ;
+; N/A                                     ; 365.63 MHz ( period = 2.735 ns )                    ; given_money_temp[4]  ; given_money_temp[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.521 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; sep_clk[0]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.504 ns                ;
+; N/A                                     ; 367.92 MHz ( period = 2.718 ns )                    ; sep_clk[5]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.503 ns                ;
+; N/A                                     ; 368.05 MHz ( period = 2.717 ns )                    ; sep_clk[2]           ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.976 ns                ;
+; N/A                                     ; 368.19 MHz ( period = 2.716 ns )                    ; given_money_temp[5]  ; given_money_temp[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.502 ns                ;
+; N/A                                     ; 368.32 MHz ( period = 2.715 ns )                    ; given_money_temp[1]  ; given_money_temp[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.501 ns                ;
+; N/A                                     ; 370.23 MHz ( period = 2.701 ns )                    ; current_state.pay    ; given_money[0]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.484 ns                ;
+; N/A                                     ; 370.64 MHz ( period = 2.698 ns )                    ; given_money_temp[2]  ; given_money_temp[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.484 ns                ;
+; N/A                                     ; 371.75 MHz ( period = 2.690 ns )                    ; sep_clk[6]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.475 ns                ;
+; N/A                                     ; 371.75 MHz ( period = 2.690 ns )                    ; sep_clk[14]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.950 ns                ;
+; N/A                                     ; 371.89 MHz ( period = 2.689 ns )                    ; sep_clk[4]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.474 ns                ;
+; N/A                                     ; 372.58 MHz ( period = 2.684 ns )                    ; sep_clk[1]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.469 ns                ;
+; N/A                                     ; 372.72 MHz ( period = 2.683 ns )                    ; sep_clk[2]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.468 ns                ;
+; N/A                                     ; 377.07 MHz ( period = 2.652 ns )                    ; sep_clk[3]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.64 MHz ( period = 2.648 ns )                    ; sep_clk[0]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.433 ns                ;
+; N/A                                     ; 377.79 MHz ( period = 2.647 ns )                    ; sep_clk[5]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.432 ns                ;
+; N/A                                     ; 377.79 MHz ( period = 2.647 ns )                    ; sep_clk[7]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.432 ns                ;
+; N/A                                     ; 381.68 MHz ( period = 2.620 ns )                    ; sep_clk[8]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.405 ns                ;
+; N/A                                     ; 381.83 MHz ( period = 2.619 ns )                    ; sep_clk[6]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.404 ns                ;
+; N/A                                     ; 382.70 MHz ( period = 2.613 ns )                    ; sep_clk[1]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 382.85 MHz ( period = 2.612 ns )                    ; sep_clk[2]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.397 ns                ;
+; N/A                                     ; 386.40 MHz ( period = 2.588 ns )                    ; given_money_temp[3]  ; given_money_temp[3]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.374 ns                ;
+; N/A                                     ; 387.45 MHz ( period = 2.581 ns )                    ; sep_clk[3]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.366 ns                ;
+; N/A                                     ; 388.05 MHz ( period = 2.577 ns )                    ; sep_clk[0]           ; sep_clk[15]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.362 ns                ;
+; N/A                                     ; 388.20 MHz ( period = 2.576 ns )                    ; sep_clk[5]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.361 ns                ;
+; N/A                                     ; 388.20 MHz ( period = 2.576 ns )                    ; sep_clk[7]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.361 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; need_money[2]        ; current_state.deal_not ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.360 ns                ;
+; N/A                                     ; 389.56 MHz ( period = 2.567 ns )                    ; need_money[2]        ; current_state.pay_ok   ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.354 ns                ;
+; N/A                                     ; 389.71 MHz ( period = 2.566 ns )                    ; need_money[2]        ; current_state.pay      ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.353 ns                ;
+; N/A                                     ; 392.31 MHz ( period = 2.549 ns )                    ; sep_clk[8]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; sep_clk[6]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.333 ns                ;
+; N/A                                     ; 393.39 MHz ( period = 2.542 ns )                    ; sep_clk[1]           ; sep_clk[15]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.327 ns                ;
+; N/A                                     ; 393.55 MHz ( period = 2.541 ns )                    ; sep_clk[2]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.326 ns                ;
+; N/A                                     ; 393.70 MHz ( period = 2.540 ns )                    ; sep_clk[12]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.800 ns                ;
+; N/A                                     ; 394.79 MHz ( period = 2.533 ns )                    ; current_state.idle   ; given_money[0]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.313 ns                ;
+; N/A                                     ; 395.26 MHz ( period = 2.530 ns )                    ; sep_clk[4]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.315 ns                ;
+; N/A                                     ; 398.09 MHz ( period = 2.512 ns )                    ; current_state.pay_ok ; change_money[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.299 ns                ;
+; N/A                                     ; 398.09 MHz ( period = 2.512 ns )                    ; current_state.pay_ok ; change_money[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.299 ns                ;
+; N/A                                     ; 398.09 MHz ( period = 2.512 ns )                    ; current_state.pay_ok ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.299 ns                ;
+; N/A                                     ; 398.09 MHz ( period = 2.512 ns )                    ; current_state.pay_ok ; change_money[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.299 ns                ;
+; N/A                                     ; 398.09 MHz ( period = 2.512 ns )                    ; current_state.pay_ok ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.299 ns                ;
+; N/A                                     ; 398.09 MHz ( period = 2.512 ns )                    ; current_state.pay_ok ; change_money[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.299 ns                ;
+; N/A                                     ; 398.41 MHz ( period = 2.510 ns )                    ; sep_clk[3]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.295 ns                ;
+; N/A                                     ; 398.41 MHz ( period = 2.510 ns )                    ; sep_clk[9]           ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.295 ns                ;
+; N/A                                     ; 399.04 MHz ( period = 2.506 ns )                    ; sep_clk[0]           ; sep_clk[14]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.291 ns                ;
+; N/A                                     ; 399.20 MHz ( period = 2.505 ns )                    ; sep_clk[7]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.290 ns                ;
+; N/A                                     ; 403.55 MHz ( period = 2.478 ns )                    ; sep_clk[8]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.263 ns                ;
+; N/A                                     ; 404.69 MHz ( period = 2.471 ns )                    ; sep_clk[1]           ; sep_clk[14]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.256 ns                ;
+; N/A                                     ; 404.86 MHz ( period = 2.470 ns )                    ; sep_clk[2]           ; sep_clk[15]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.255 ns                ;
+; N/A                                     ; 406.67 MHz ( period = 2.459 ns )                    ; sep_clk[4]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.244 ns                ;
+; N/A                                     ; 407.33 MHz ( period = 2.455 ns )                    ; current_state.pay    ; given_money[4]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.240 ns                ;
+; N/A                                     ; 407.33 MHz ( period = 2.455 ns )                    ; current_state.pay    ; given_money[5]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.240 ns                ;
+; N/A                                     ; 407.50 MHz ( period = 2.454 ns )                    ; need_money[3]        ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.242 ns                ;
+; N/A                                     ; 408.83 MHz ( period = 2.446 ns )                    ; current_state.pay    ; given_money[1]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.232 ns                ;
+; N/A                                     ; 408.83 MHz ( period = 2.446 ns )                    ; current_state.pay    ; given_money[3]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.232 ns                ;
+; N/A                                     ; 408.83 MHz ( period = 2.446 ns )                    ; current_state.pay    ; given_money[2]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.232 ns                ;
+; N/A                                     ; 409.33 MHz ( period = 2.443 ns )                    ; need_money[3]        ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.231 ns                ;
+; N/A                                     ; 410.00 MHz ( period = 2.439 ns )                    ; sep_clk[3]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.224 ns                ;
+; N/A                                     ; 410.00 MHz ( period = 2.439 ns )                    ; sep_clk[9]           ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.224 ns                ;
+; N/A                                     ; 410.00 MHz ( period = 2.439 ns )                    ; sep_clk[10]          ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.224 ns                ;
+; N/A                                     ; 410.68 MHz ( period = 2.435 ns )                    ; sep_clk[0]           ; sep_clk[13]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.220 ns                ;
+; N/A                                     ; 410.85 MHz ( period = 2.434 ns )                    ; sep_clk[7]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.219 ns                ;
+; N/A                                     ; 412.37 MHz ( period = 2.425 ns )                    ; sep_clk[18]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.685 ns                ;
+; N/A                                     ; 412.54 MHz ( period = 2.424 ns )                    ; given_money[1]       ; current_state.deal_not ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.210 ns                ;
+; N/A                                     ; 413.56 MHz ( period = 2.418 ns )                    ; given_money[1]       ; current_state.pay_ok   ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.204 ns                ;
+; N/A                                     ; 413.74 MHz ( period = 2.417 ns )                    ; sep_clk[5]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.202 ns                ;
+; N/A                                     ; 413.74 MHz ( period = 2.417 ns )                    ; given_money[1]       ; current_state.pay      ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.203 ns                ;
+; N/A                                     ; 414.42 MHz ( period = 2.413 ns )                    ; sep_clk[22]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.673 ns                ;
+; N/A                                     ; 414.42 MHz ( period = 2.413 ns )                    ; need_money[4]        ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.201 ns                ;
+; N/A                                     ; 414.59 MHz ( period = 2.412 ns )                    ; given_money[1]       ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.199 ns                ;
+; N/A                                     ; 415.45 MHz ( period = 2.407 ns )                    ; sep_clk[8]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.192 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; current_state.pay    ; change_money[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.191 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; current_state.pay    ; change_money[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.191 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; current_state.pay    ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.191 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; current_state.pay    ; change_money[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.191 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; current_state.pay    ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.191 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; current_state.pay    ; change_money[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.191 ns                ;
+; N/A                                     ; 416.49 MHz ( period = 2.401 ns )                    ; given_money[1]       ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.188 ns                ;
+; N/A                                     ; 416.67 MHz ( period = 2.400 ns )                    ; sep_clk[1]           ; sep_clk[13]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.185 ns                ;
+; N/A                                     ; 416.84 MHz ( period = 2.399 ns )                    ; sep_clk[2]           ; sep_clk[14]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.184 ns                ;
+; N/A                                     ; 417.89 MHz ( period = 2.393 ns )                    ; sep_clk[19]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.653 ns                ;
+; N/A                                     ; 418.59 MHz ( period = 2.389 ns )                    ; sep_clk[6]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.174 ns                ;
+; N/A                                     ; 418.59 MHz ( period = 2.389 ns )                    ; sep_clk[11]          ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.174 ns                ;
+; N/A                                     ; 418.76 MHz ( period = 2.388 ns )                    ; sep_clk[4]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.173 ns                ;
+; N/A                                     ; 419.29 MHz ( period = 2.385 ns )                    ; sep_clk[23]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.645 ns                ;
+; N/A                                     ; 419.64 MHz ( period = 2.383 ns )                    ; need_money[3]        ; change_money[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.171 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[3]           ; sep_clk[15]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.153 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[9]           ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.153 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[10]          ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.153 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[0]           ; sep_clk[12]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.149 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[3]        ; change_money[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.145 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[5]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.131 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[1]       ; change_money[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.128 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[1]           ; sep_clk[12]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.114 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[2]           ; sep_clk[13]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.113 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[2]        ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.113 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[6]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.103 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[11]          ; sep_clk[22]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.103 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[4]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.102 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[1]       ; change_money[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.102 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[2]        ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.102 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[3]           ; sep_clk[14]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.082 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[9]           ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.082 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[10]          ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.082 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.idle   ; given_money[4]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.idle   ; given_money[5]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[16]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.539 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.idle   ; given_money[1]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.061 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.idle   ; given_money[3]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.061 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.idle   ; given_money[2]         ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.061 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[5]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.060 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[7]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.060 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[20]          ; aft_clk                ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.527 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[2]           ; sep_clk[12]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.042 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[3]       ; current_state.deal_not ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.043 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[2]        ; change_money[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.042 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[3]       ; current_state.pay_ok   ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.037 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[3]       ; current_state.pay      ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.036 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[8]           ; sep_clk[19]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.033 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[6]           ; sep_clk[17]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.032 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[11]          ; sep_clk[21]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.032 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[4]           ; sep_clk[15]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.031 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.choose ; change_money[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.choose ; change_money[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.choose ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.choose ; change_money[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.choose ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.choose ; change_money[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[3]           ; sep_clk[13]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.011 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[10]          ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.011 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[3]        ; current_state.deal_not ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.013 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[3]        ; current_state.pay_ok   ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.007 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; need_money[3]        ; current_state.pay      ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.006 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[0]           ; sep_clk[11]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 2.003 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[12]          ; sep_clk[23]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.993 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[5]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.989 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[7]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.989 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[4]       ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.975 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[1]           ; sep_clk[11]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.968 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[2]       ; change_money[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.968 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[8]           ; sep_clk[18]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.962 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[6]           ; sep_clk[16]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.961 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[11]          ; sep_clk[20]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.961 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; sep_clk[4]           ; sep_clk[14]            ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; given_money[2]       ; change_money[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.957 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; current_state.pay_ok ; current_state.deal_not ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 1.948 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                      ;                        ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------+
+; tsu                                                                            ;
++-------+--------------+------------+--------+------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                     ; To Clock ;
++-------+--------------+------------+--------+------------------------+----------+
+; N/A   ; None         ; 3.797 ns   ; SW[17] ; current_state.idle     ; CLOCK_27 ;
+; N/A   ; None         ; 3.539 ns   ; SW[16] ; current_state.deal_not ; CLOCK_27 ;
+; N/A   ; None         ; 3.471 ns   ; SW[15] ; current_state.deal_not ; CLOCK_27 ;
+; N/A   ; None         ; 2.953 ns   ; SW[17] ; current_state.deal_not ; CLOCK_27 ;
+; N/A   ; None         ; 2.829 ns   ; SW[16] ; current_state.pay_ok   ; CLOCK_27 ;
+; N/A   ; None         ; 2.464 ns   ; SW[15] ; current_state.deal_ok  ; CLOCK_27 ;
+; N/A   ; None         ; 2.446 ns   ; SW[16] ; current_state.deal_ok  ; CLOCK_27 ;
+; N/A   ; None         ; 2.379 ns   ; SW[17] ; current_state.pay      ; CLOCK_27 ;
+; N/A   ; None         ; 2.348 ns   ; SW[15] ; current_state.idle     ; CLOCK_27 ;
+; N/A   ; None         ; 2.243 ns   ; SW[17] ; current_state.pay_ok   ; CLOCK_27 ;
+; N/A   ; None         ; 0.788 ns   ; SW[8]  ; given_money_temp[5]    ; CLOCK_27 ;
+; N/A   ; None         ; 0.567 ns   ; SW[8]  ; given_money_temp[4]    ; CLOCK_27 ;
+; N/A   ; None         ; 0.542 ns   ; SW[8]  ; given_money_temp[2]    ; CLOCK_27 ;
+; N/A   ; None         ; 0.468 ns   ; SW[8]  ; given_money_temp[1]    ; CLOCK_27 ;
+; N/A   ; None         ; 0.418 ns   ; SW[8]  ; given_money_temp[3]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.094 ns  ; SW[9]  ; given_money_temp[4]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.107 ns  ; SW[9]  ; given_money_temp[5]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.333 ns  ; SW[9]  ; given_money_temp[2]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.534 ns  ; SW[9]  ; given_money_temp[3]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.603 ns  ; SW[0]  ; current_state.idle     ; CLOCK_27 ;
+; N/A   ; None         ; -0.656 ns  ; SW[9]  ; given_money_temp[0]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.691 ns  ; SW[9]  ; given_money_temp[1]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.711 ns  ; SW[8]  ; given_money_temp[0]    ; CLOCK_27 ;
+; N/A   ; None         ; -0.831 ns  ; SW[1]  ; current_state.idle     ; CLOCK_27 ;
+; N/A   ; None         ; -0.853 ns  ; SW[0]  ; need_money_temp[3]     ; CLOCK_27 ;
+; N/A   ; None         ; -0.853 ns  ; SW[0]  ; need_money_temp[4]     ; CLOCK_27 ;
+; N/A   ; None         ; -0.853 ns  ; SW[0]  ; need_money_temp[2]     ; CLOCK_27 ;
+; N/A   ; None         ; -0.866 ns  ; SW[2]  ; current_state.idle     ; CLOCK_27 ;
+; N/A   ; None         ; -1.081 ns  ; SW[1]  ; need_money_temp[3]     ; CLOCK_27 ;
+; N/A   ; None         ; -1.081 ns  ; SW[1]  ; need_money_temp[4]     ; CLOCK_27 ;
+; N/A   ; None         ; -1.081 ns  ; SW[1]  ; need_money_temp[2]     ; CLOCK_27 ;
+; N/A   ; None         ; -1.116 ns  ; SW[2]  ; need_money_temp[3]     ; CLOCK_27 ;
+; N/A   ; None         ; -1.116 ns  ; SW[2]  ; need_money_temp[4]     ; CLOCK_27 ;
+; N/A   ; None         ; -1.116 ns  ; SW[2]  ; need_money_temp[2]     ; CLOCK_27 ;
+; N/A   ; None         ; -1.389 ns  ; SW[10] ; given_money_temp[1]    ; CLOCK_27 ;
+; N/A   ; None         ; -1.389 ns  ; SW[10] ; given_money_temp[2]    ; CLOCK_27 ;
+; N/A   ; None         ; -1.389 ns  ; SW[10] ; given_money_temp[3]    ; CLOCK_27 ;
+; N/A   ; None         ; -1.389 ns  ; SW[10] ; given_money_temp[4]    ; CLOCK_27 ;
+; N/A   ; None         ; -1.389 ns  ; SW[10] ; given_money_temp[5]    ; CLOCK_27 ;
+; N/A   ; None         ; -1.711 ns  ; SW[1]  ; current_state.choose   ; CLOCK_27 ;
+; N/A   ; None         ; -1.833 ns  ; SW[0]  ; current_state.choose   ; CLOCK_27 ;
+; N/A   ; None         ; -1.863 ns  ; SW[10] ; given_money_temp[0]    ; CLOCK_27 ;
+; N/A   ; None         ; -1.953 ns  ; SW[2]  ; current_state.choose   ; CLOCK_27 ;
++-------+--------------+------------+--------+------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                        ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------+---------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                   ; To      ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------+---------+------------+
+; N/A                                     ; None                                                ; 14.295 ns  ; change_money[2]        ; HEX1[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 14.233 ns  ; change_money[2]        ; HEX1[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 14.154 ns  ; change_money[1]        ; HEX1[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 14.092 ns  ; change_money[1]        ; HEX1[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.967 ns  ; change_money[4]        ; HEX1[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.905 ns  ; change_money[4]        ; HEX1[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.855 ns  ; change_money[2]        ; HEX2[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.841 ns  ; change_money[0]        ; HEX1[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.806 ns  ; change_money[2]        ; HEX1[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.786 ns  ; change_money[2]        ; HEX1[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.779 ns  ; change_money[0]        ; HEX1[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.714 ns  ; change_money[1]        ; HEX2[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.665 ns  ; change_money[1]        ; HEX1[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.645 ns  ; change_money[1]        ; HEX1[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.527 ns  ; change_money[4]        ; HEX2[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.478 ns  ; change_money[4]        ; HEX1[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.458 ns  ; change_money[4]        ; HEX1[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.450 ns  ; change_money[5]        ; HEX1[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.401 ns  ; change_money[0]        ; HEX2[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.388 ns  ; change_money[5]        ; HEX1[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.352 ns  ; change_money[0]        ; HEX1[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.332 ns  ; change_money[0]        ; HEX1[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 13.061 ns  ; change_money[3]        ; HEX1[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.999 ns  ; change_money[3]        ; HEX1[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.988 ns  ; change_money[5]        ; HEX2[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.961 ns  ; change_money[5]        ; HEX1[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.941 ns  ; change_money[5]        ; HEX1[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.843 ns  ; change_money[3]        ; HEX2[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.572 ns  ; change_money[3]        ; HEX1[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.552 ns  ; change_money[3]        ; HEX1[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.499 ns  ; given_money[3]         ; HEX5[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.458 ns  ; given_money[2]         ; HEX5[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.454 ns  ; given_money[3]         ; HEX5[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.441 ns  ; change_money[4]        ; HEX2[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.435 ns  ; change_money[4]        ; HEX2[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.413 ns  ; given_money[2]         ; HEX5[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.371 ns  ; change_money[3]        ; HEX2[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.349 ns  ; current_state.deal_not ; HEX3[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.334 ns  ; current_state.deal_not ; HEX3[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.327 ns  ; change_money[4]        ; HEX2[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.320 ns  ; change_money[1]        ; HEX2[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.314 ns  ; change_money[1]        ; HEX2[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.314 ns  ; change_money[3]        ; HEX2[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.309 ns  ; change_money[5]        ; HEX2[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.303 ns  ; change_money[5]        ; HEX2[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.270 ns  ; change_money[4]        ; HEX2[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.255 ns  ; change_money[1]        ; HEX0[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.255 ns  ; change_money[3]        ; HEX0[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.225 ns  ; change_money[3]        ; HEX2[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.219 ns  ; change_money[3]        ; HEX2[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.196 ns  ; change_money[1]        ; HEX2[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.191 ns  ; given_money[1]         ; HEX5[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.146 ns  ; given_money[1]         ; HEX5[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.142 ns  ; current_state.choose   ; HEX3[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.139 ns  ; change_money[1]        ; HEX2[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.128 ns  ; change_money[3]        ; HEX0[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.127 ns  ; current_state.choose   ; HEX3[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.126 ns  ; change_money[1]        ; HEX0[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.112 ns  ; given_money[4]         ; HEX5[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.097 ns  ; given_money[2]         ; HEX4[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.093 ns  ; given_money[3]         ; HEX5[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.067 ns  ; given_money[4]         ; HEX5[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.066 ns  ; given_money[2]         ; HEX5[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.031 ns  ; change_money[2]        ; HEX0[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 12.013 ns  ; change_money[3]        ; HEX2[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.979 ns  ; change_money[0]        ; HEX0[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.969 ns  ; change_money[4]        ; HEX2[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.963 ns  ; change_money[2]        ; HEX2[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.953 ns  ; current_state.deal_not ; HEX3[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.922 ns  ; current_state.pay      ; HEX3[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.906 ns  ; change_money[2]        ; HEX2[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.898 ns  ; change_money[2]        ; HEX0[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.890 ns  ; change_money[3]        ; HEX0[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.888 ns  ; change_money[1]        ; HEX0[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.859 ns  ; given_money[0]         ; HEX4[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.849 ns  ; change_money[0]        ; HEX0[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.845 ns  ; change_money[3]        ; HEX0[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.842 ns  ; change_money[1]        ; HEX0[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.838 ns  ; change_money[1]        ; HEX2[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.782 ns  ; given_money[1]         ; HEX5[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.781 ns  ; change_money[4]        ; HEX0[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.761 ns  ; change_money[3]        ; HEX0[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.758 ns  ; change_money[1]        ; HEX0[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.754 ns  ; current_state.idle     ; HEX3[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.746 ns  ; current_state.choose   ; HEX3[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.745 ns  ; current_state.idle     ; HEX3[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.726 ns  ; given_money[3]         ; HEX4[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.714 ns  ; given_money[2]         ; HEX4[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.713 ns  ; change_money[2]        ; HEX2[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.711 ns  ; given_money[4]         ; HEX5[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.707 ns  ; change_money[2]        ; HEX2[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.699 ns  ; given_money[2]         ; HEX4[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.678 ns  ; current_state.idle     ; HEX3[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.675 ns  ; given_money[3]         ; HEX4[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.658 ns  ; change_money[2]        ; HEX0[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.638 ns  ; change_money[3]        ; HEX0[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.636 ns  ; change_money[1]        ; HEX0[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.633 ns  ; given_money[3]         ; HEX5[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.617 ns  ; given_money[2]         ; HEX4[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.612 ns  ; given_money[3]         ; HEX5[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.610 ns  ; change_money[0]        ; HEX0[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.605 ns  ; change_money[2]        ; HEX2[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.598 ns  ; given_money[1]         ; HEX4[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.597 ns  ; given_money[2]         ; HEX5[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.592 ns  ; given_money[3]         ; HEX5[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.590 ns  ; change_money[5]        ; HEX0[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.585 ns  ; change_money[2]        ; HEX0[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.585 ns  ; given_money[2]         ; HEX5[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.565 ns  ; given_money[2]         ; HEX5[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.564 ns  ; change_money[0]        ; HEX0[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.551 ns  ; change_money[2]        ; HEX0[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.512 ns  ; given_money[1]         ; HEX4[1] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.482 ns  ; change_money[0]        ; HEX0[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.469 ns  ; given_money[0]         ; HEX4[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.444 ns  ; current_state.deal_ok  ; HEX3[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.428 ns  ; given_money[4]         ; HEX4[1] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.416 ns  ; given_money[1]         ; HEX4[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.408 ns  ; change_money[2]        ; HEX0[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.406 ns  ; change_money[4]        ; HEX0[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.368 ns  ; change_money[5]        ; HEX2[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.363 ns  ; given_money[0]         ; HEX4[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.359 ns  ; change_money[0]        ; HEX0[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.344 ns  ; given_money[4]         ; HEX4[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.326 ns  ; given_money[1]         ; HEX5[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.321 ns  ; given_money[3]         ; HEX4[1] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.311 ns  ; change_money[5]        ; HEX2[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.309 ns  ; change_money[0]        ; HEX2[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.304 ns  ; given_money[2]         ; HEX4[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.303 ns  ; change_money[0]        ; HEX2[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.301 ns  ; given_money[1]         ; HEX5[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.284 ns  ; given_money[3]         ; HEX4[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.281 ns  ; given_money[1]         ; HEX5[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.277 ns  ; current_state.pay      ; HEX3[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.246 ns  ; given_money[4]         ; HEX5[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.243 ns  ; given_money[5]         ; HEX5[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.230 ns  ; given_money[4]         ; HEX5[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.228 ns  ; given_money[4]         ; HEX4[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.228 ns  ; given_money[0]         ; HEX4[1] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.211 ns  ; given_money[1]         ; HEX4[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.210 ns  ; given_money[4]         ; HEX5[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.209 ns  ; change_money[5]        ; HEX0[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.198 ns  ; given_money[5]         ; HEX5[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.191 ns  ; given_money[3]         ; HEX4[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.191 ns  ; given_money[3]         ; HEX4[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.184 ns  ; change_money[5]        ; HEX0[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.182 ns  ; given_money[0]         ; HEX4[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.162 ns  ; given_money[2]         ; HEX4[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.159 ns  ; given_money[1]         ; HEX4[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.104 ns  ; given_money[1]         ; HEX4[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.056 ns  ; LEDG[0]~reg0           ; LEDG[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.048 ns  ; given_money[2]         ; HEX4[1] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 11.010 ns  ; change_money[5]        ; HEX2[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.999 ns  ; need_money[2]          ; HEX7[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.979 ns  ; need_money[4]          ; HEX7[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.975 ns  ; given_money[4]         ; HEX4[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.945 ns  ; change_money[4]        ; HEX0[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.942 ns  ; need_money[4]          ; HEX7[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.931 ns  ; given_money[5]         ; HEX4[1] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.916 ns  ; change_money[4]        ; HEX0[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.912 ns  ; need_money[4]          ; HEX7[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.912 ns  ; need_money[4]          ; HEX7[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.897 ns  ; change_money[5]        ; HEX0[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.880 ns  ; given_money[1]         ; HEX4[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.866 ns  ; given_money[5]         ; HEX5[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.844 ns  ; need_money[3]          ; HEX7[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.833 ns  ; need_money[3]          ; HEX7[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.819 ns  ; change_money[5]        ; HEX0[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.814 ns  ; need_money[3]          ; HEX7[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.814 ns  ; need_money[3]          ; HEX7[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.812 ns  ; given_money[5]         ; HEX4[0] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.810 ns  ; given_money[4]         ; HEX4[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.778 ns  ; given_money[3]         ; HEX4[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.766 ns  ; change_money[4]        ; HEX0[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.755 ns  ; need_money[2]          ; HEX7[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.751 ns  ; need_money[2]          ; HEX7[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.731 ns  ; need_money[4]          ; HEX7[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.731 ns  ; need_money[4]          ; HEX7[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.716 ns  ; given_money[5]         ; HEX4[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.708 ns  ; given_money[4]         ; HEX4[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.704 ns  ; LEDG[7]~reg0           ; LEDG[7] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.694 ns  ; change_money[5]        ; HEX0[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.646 ns  ; given_money[5]         ; HEX4[2] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.585 ns  ; need_money[3]          ; HEX7[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.585 ns  ; need_money[3]          ; HEX7[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.572 ns  ; need_money[2]          ; HEX6[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.572 ns  ; need_money[2]          ; HEX6[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.555 ns  ; change_money[4]        ; HEX0[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.552 ns  ; need_money[2]          ; HEX6[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.502 ns  ; need_money[4]          ; HEX6[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.502 ns  ; need_money[4]          ; HEX6[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.488 ns  ; given_money[5]         ; HEX4[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.482 ns  ; need_money[4]          ; HEX6[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.403 ns  ; need_money[3]          ; HEX6[4] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.403 ns  ; need_money[3]          ; HEX6[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.396 ns  ; given_money[5]         ; HEX4[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.391 ns  ; given_money[4]         ; HEX4[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.385 ns  ; given_money[5]         ; HEX5[3] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.383 ns  ; need_money[3]          ; HEX6[6] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.381 ns  ; given_money[5]         ; HEX5[5] ; CLOCK_27   ;
+; N/A                                     ; None                                                ; 10.365 ns  ; given_money[5]         ; HEX5[4] ; CLOCK_27   ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                        ;         ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------+---------+------------+
+
+
++-----------------------------------------------------------------+
+; tpd                                                             ;
++-------+-------------------+-----------------+--------+----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From   ; To       ;
++-------+-------------------+-----------------+--------+----------+
+; N/A   ; None              ; 9.868 ns        ; SW[14] ; LEDR[14] ;
+; N/A   ; None              ; 9.682 ns        ; SW[17] ; LEDR[17] ;
+; N/A   ; None              ; 9.681 ns        ; SW[16] ; LEDR[16] ;
+; N/A   ; None              ; 9.598 ns        ; SW[13] ; LEDR[13] ;
+; N/A   ; None              ; 9.406 ns        ; SW[15] ; LEDR[15] ;
+; N/A   ; None              ; 6.279 ns        ; SW[7]  ; LEDR[7]  ;
+; N/A   ; None              ; 6.210 ns        ; SW[9]  ; LEDR[9]  ;
+; N/A   ; None              ; 5.868 ns        ; SW[8]  ; LEDR[8]  ;
+; N/A   ; None              ; 5.702 ns        ; SW[10] ; LEDR[10] ;
+; N/A   ; None              ; 5.702 ns        ; SW[5]  ; LEDR[5]  ;
+; N/A   ; None              ; 5.688 ns        ; SW[12] ; LEDR[12] ;
+; N/A   ; None              ; 5.673 ns        ; SW[1]  ; LEDR[1]  ;
+; N/A   ; None              ; 5.636 ns        ; SW[11] ; LEDR[11] ;
+; N/A   ; None              ; 5.611 ns        ; SW[0]  ; LEDR[0]  ;
+; N/A   ; None              ; 5.425 ns        ; SW[3]  ; LEDR[3]  ;
+; N/A   ; None              ; 5.338 ns        ; SW[6]  ; LEDR[6]  ;
+; N/A   ; None              ; 5.280 ns        ; SW[4]  ; LEDR[4]  ;
+; N/A   ; None              ; 5.135 ns        ; SW[2]  ; LEDR[2]  ;
++-------+-------------------+-----------------+--------+----------+
+
+
++--------------------------------------------------------------------------------------+
+; th                                                                                   ;
++---------------+-------------+-----------+--------+------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                     ; To Clock ;
++---------------+-------------+-----------+--------+------------------------+----------+
+; N/A           ; None        ; 2.419 ns  ; SW[10] ; given_money_temp[0]    ; CLOCK_27 ;
+; N/A           ; None        ; 2.183 ns  ; SW[2]  ; current_state.choose   ; CLOCK_27 ;
+; N/A           ; None        ; 2.183 ns  ; SW[2]  ; need_money_temp[4]     ; CLOCK_27 ;
+; N/A           ; None        ; 2.183 ns  ; SW[2]  ; need_money_temp[2]     ; CLOCK_27 ;
+; N/A           ; None        ; 2.181 ns  ; SW[2]  ; need_money_temp[3]     ; CLOCK_27 ;
+; N/A           ; None        ; 2.150 ns  ; SW[1]  ; need_money_temp[2]     ; CLOCK_27 ;
+; N/A           ; None        ; 2.063 ns  ; SW[0]  ; current_state.choose   ; CLOCK_27 ;
+; N/A           ; None        ; 1.941 ns  ; SW[1]  ; current_state.choose   ; CLOCK_27 ;
+; N/A           ; None        ; 1.619 ns  ; SW[10] ; given_money_temp[1]    ; CLOCK_27 ;
+; N/A           ; None        ; 1.619 ns  ; SW[10] ; given_money_temp[2]    ; CLOCK_27 ;
+; N/A           ; None        ; 1.619 ns  ; SW[10] ; given_money_temp[3]    ; CLOCK_27 ;
+; N/A           ; None        ; 1.619 ns  ; SW[10] ; given_money_temp[4]    ; CLOCK_27 ;
+; N/A           ; None        ; 1.619 ns  ; SW[10] ; given_money_temp[5]    ; CLOCK_27 ;
+; N/A           ; None        ; 1.453 ns  ; SW[9]  ; given_money_temp[0]    ; CLOCK_27 ;
+; N/A           ; None        ; 1.311 ns  ; SW[1]  ; need_money_temp[3]     ; CLOCK_27 ;
+; N/A           ; None        ; 1.311 ns  ; SW[1]  ; need_money_temp[4]     ; CLOCK_27 ;
+; N/A           ; None        ; 1.096 ns  ; SW[2]  ; current_state.idle     ; CLOCK_27 ;
+; N/A           ; None        ; 1.083 ns  ; SW[0]  ; need_money_temp[3]     ; CLOCK_27 ;
+; N/A           ; None        ; 1.083 ns  ; SW[0]  ; need_money_temp[4]     ; CLOCK_27 ;
+; N/A           ; None        ; 1.083 ns  ; SW[0]  ; need_money_temp[2]     ; CLOCK_27 ;
+; N/A           ; None        ; 1.061 ns  ; SW[1]  ; current_state.idle     ; CLOCK_27 ;
+; N/A           ; None        ; 0.941 ns  ; SW[8]  ; given_money_temp[0]    ; CLOCK_27 ;
+; N/A           ; None        ; 0.921 ns  ; SW[9]  ; given_money_temp[1]    ; CLOCK_27 ;
+; N/A           ; None        ; 0.833 ns  ; SW[0]  ; current_state.idle     ; CLOCK_27 ;
+; N/A           ; None        ; 0.764 ns  ; SW[9]  ; given_money_temp[3]    ; CLOCK_27 ;
+; N/A           ; None        ; 0.563 ns  ; SW[9]  ; given_money_temp[2]    ; CLOCK_27 ;
+; N/A           ; None        ; 0.337 ns  ; SW[9]  ; given_money_temp[5]    ; CLOCK_27 ;
+; N/A           ; None        ; 0.324 ns  ; SW[9]  ; given_money_temp[4]    ; CLOCK_27 ;
+; N/A           ; None        ; -0.188 ns ; SW[8]  ; given_money_temp[3]    ; CLOCK_27 ;
+; N/A           ; None        ; -0.238 ns ; SW[8]  ; given_money_temp[1]    ; CLOCK_27 ;
+; N/A           ; None        ; -0.312 ns ; SW[8]  ; given_money_temp[2]    ; CLOCK_27 ;
+; N/A           ; None        ; -0.337 ns ; SW[8]  ; given_money_temp[4]    ; CLOCK_27 ;
+; N/A           ; None        ; -0.558 ns ; SW[8]  ; given_money_temp[5]    ; CLOCK_27 ;
+; N/A           ; None        ; -2.013 ns ; SW[17] ; current_state.pay_ok   ; CLOCK_27 ;
+; N/A           ; None        ; -2.016 ns ; SW[17] ; current_state.deal_not ; CLOCK_27 ;
+; N/A           ; None        ; -2.118 ns ; SW[15] ; current_state.idle     ; CLOCK_27 ;
+; N/A           ; None        ; -2.149 ns ; SW[17] ; current_state.pay      ; CLOCK_27 ;
+; N/A           ; None        ; -2.216 ns ; SW[16] ; current_state.deal_ok  ; CLOCK_27 ;
+; N/A           ; None        ; -2.234 ns ; SW[15] ; current_state.deal_ok  ; CLOCK_27 ;
+; N/A           ; None        ; -2.599 ns ; SW[16] ; current_state.pay_ok   ; CLOCK_27 ;
+; N/A           ; None        ; -3.241 ns ; SW[15] ; current_state.deal_not ; CLOCK_27 ;
+; N/A           ; None        ; -3.309 ns ; SW[16] ; current_state.deal_not ; CLOCK_27 ;
+; N/A           ; None        ; -3.567 ns ; SW[17] ; current_state.idle     ; CLOCK_27 ;
++---------------+-------------+-----------+--------+------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sun Apr 01 09:56:09 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off yjc -c yjc --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK_27" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "aft_clk" as buffer
+Info: Clock "CLOCK_27" has Internal fmax of 298.78 MHz between source register "given_money_temp[1]" and destination register "given_money_temp[5]" (period= 3.347 ns)
+    Info: + Longest register to register delay is 3.133 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X23_Y18_N23; Fanout = 8; REG Node = 'given_money_temp[1]'
+        Info: 2: + IC(0.543 ns) + CELL(0.393 ns) = 0.936 ns; Loc. = LCCOMB_X24_Y18_N6; Fanout = 2; COMB Node = 'Add3~3'
+        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 1.007 ns; Loc. = LCCOMB_X24_Y18_N8; Fanout = 2; COMB Node = 'Add3~6'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.078 ns; Loc. = LCCOMB_X24_Y18_N10; Fanout = 2; COMB Node = 'Add3~9'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.149 ns; Loc. = LCCOMB_X24_Y18_N12; Fanout = 1; COMB Node = 'Add3~12'
+        Info: 6: + IC(0.000 ns) + CELL(0.410 ns) = 1.559 ns; Loc. = LCCOMB_X24_Y18_N14; Fanout = 1; COMB Node = 'Add3~14'
+        Info: 7: + IC(0.252 ns) + CELL(0.271 ns) = 2.082 ns; Loc. = LCCOMB_X24_Y18_N28; Fanout = 1; COMB Node = 'Add3~16'
+        Info: 8: + IC(0.685 ns) + CELL(0.366 ns) = 3.133 ns; Loc. = LCFF_X23_Y18_N31; Fanout = 5; REG Node = 'given_money_temp[5]'
+        Info: Total cell delay = 1.653 ns ( 52.76 % )
+        Info: Total interconnect delay = 1.480 ns ( 47.24 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLOCK_27" to destination register is 4.721 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; CLK Node = 'CLOCK_27'
+            Info: 2: + IC(0.622 ns) + CELL(0.787 ns) = 2.388 ns; Loc. = LCFF_X31_Y34_N17; Fanout = 3; REG Node = 'aft_clk'
+            Info: 3: + IC(0.768 ns) + CELL(0.000 ns) = 3.156 ns; Loc. = CLKCTRL_G10; Fanout = 32; COMB Node = 'aft_clk~clkctrl'
+            Info: 4: + IC(1.028 ns) + CELL(0.537 ns) = 4.721 ns; Loc. = LCFF_X23_Y18_N31; Fanout = 5; REG Node = 'given_money_temp[5]'
+            Info: Total cell delay = 2.303 ns ( 48.78 % )
+            Info: Total interconnect delay = 2.418 ns ( 51.22 % )
+        Info: - Longest clock path from clock "CLOCK_27" to source register is 4.721 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; CLK Node = 'CLOCK_27'
+            Info: 2: + IC(0.622 ns) + CELL(0.787 ns) = 2.388 ns; Loc. = LCFF_X31_Y34_N17; Fanout = 3; REG Node = 'aft_clk'
+            Info: 3: + IC(0.768 ns) + CELL(0.000 ns) = 3.156 ns; Loc. = CLKCTRL_G10; Fanout = 32; COMB Node = 'aft_clk~clkctrl'
+            Info: 4: + IC(1.028 ns) + CELL(0.537 ns) = 4.721 ns; Loc. = LCFF_X23_Y18_N23; Fanout = 8; REG Node = 'given_money_temp[1]'
+            Info: Total cell delay = 2.303 ns ( 48.78 % )
+            Info: Total interconnect delay = 2.418 ns ( 51.22 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "current_state.idle" (data pin = "SW[17]", clock pin = "CLOCK_27") is 3.797 ns
+    Info: + Longest pin to register delay is 8.556 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_V2; Fanout = 6; PIN Node = 'SW[17]'
+        Info: 2: + IC(6.524 ns) + CELL(0.438 ns) = 7.814 ns; Loc. = LCCOMB_X25_Y18_N12; Fanout = 1; COMB Node = 'Selector0~0'
+        Info: 3: + IC(0.260 ns) + CELL(0.398 ns) = 8.472 ns; Loc. = LCCOMB_X25_Y18_N2; Fanout = 1; COMB Node = 'Selector0~1'
+        Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 8.556 ns; Loc. = LCFF_X25_Y18_N3; Fanout = 7; REG Node = 'current_state.idle'
+        Info: Total cell delay = 1.772 ns ( 20.71 % )
+        Info: Total interconnect delay = 6.784 ns ( 79.29 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "CLOCK_27" to destination register is 4.723 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; CLK Node = 'CLOCK_27'
+        Info: 2: + IC(0.622 ns) + CELL(0.787 ns) = 2.388 ns; Loc. = LCFF_X31_Y34_N17; Fanout = 3; REG Node = 'aft_clk'
+        Info: 3: + IC(0.768 ns) + CELL(0.000 ns) = 3.156 ns; Loc. = CLKCTRL_G10; Fanout = 32; COMB Node = 'aft_clk~clkctrl'
+        Info: 4: + IC(1.030 ns) + CELL(0.537 ns) = 4.723 ns; Loc. = LCFF_X25_Y18_N3; Fanout = 7; REG Node = 'current_state.idle'
+        Info: Total cell delay = 2.303 ns ( 48.76 % )
+        Info: Total interconnect delay = 2.420 ns ( 51.24 % )
+Info: tco from clock "CLOCK_27" to destination pin "HEX1[5]" through register "change_money[2]" is 14.295 ns
+    Info: + Longest clock path from clock "CLOCK_27" to source register is 4.721 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; CLK Node = 'CLOCK_27'
+        Info: 2: + IC(0.622 ns) + CELL(0.787 ns) = 2.388 ns; Loc. = LCFF_X31_Y34_N17; Fanout = 3; REG Node = 'aft_clk'
+        Info: 3: + IC(0.768 ns) + CELL(0.000 ns) = 3.156 ns; Loc. = CLKCTRL_G10; Fanout = 32; COMB Node = 'aft_clk~clkctrl'
+        Info: 4: + IC(1.028 ns) + CELL(0.537 ns) = 4.721 ns; Loc. = LCFF_X23_Y18_N11; Fanout = 15; REG Node = 'change_money[2]'
+        Info: Total cell delay = 2.303 ns ( 48.78 % )
+        Info: Total interconnect delay = 2.418 ns ( 51.22 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 9.324 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X23_Y18_N11; Fanout = 15; REG Node = 'change_money[2]'
+        Info: 2: + IC(0.508 ns) + CELL(0.420 ns) = 0.928 ns; Loc. = LCCOMB_X23_Y18_N6; Fanout = 1; COMB Node = 'WideOr25~0'
+        Info: 3: + IC(0.978 ns) + CELL(0.416 ns) = 2.322 ns; Loc. = LCCOMB_X24_Y16_N20; Fanout = 4; COMB Node = 'WideOr25~2'
+        Info: 4: + IC(4.370 ns) + CELL(2.632 ns) = 9.324 ns; Loc. = PIN_AA23; Fanout = 0; PIN Node = 'HEX1[5]'
+        Info: Total cell delay = 3.468 ns ( 37.19 % )
+        Info: Total interconnect delay = 5.856 ns ( 62.81 % )
+Info: Longest tpd from source pin "SW[14]" to destination pin "LEDR[14]" is 9.868 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_U3; Fanout = 1; PIN Node = 'SW[14]'
+    Info: 2: + IC(6.228 ns) + CELL(2.798 ns) = 9.868 ns; Loc. = PIN_AF13; Fanout = 0; PIN Node = 'LEDR[14]'
+    Info: Total cell delay = 3.640 ns ( 36.89 % )
+    Info: Total interconnect delay = 6.228 ns ( 63.11 % )
+Info: th for register "given_money_temp[0]" (data pin = "SW[10]", clock pin = "CLOCK_27") is 2.419 ns
+    Info: + Longest clock path from clock "CLOCK_27" to destination register is 4.722 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; CLK Node = 'CLOCK_27'
+        Info: 2: + IC(0.622 ns) + CELL(0.787 ns) = 2.388 ns; Loc. = LCFF_X31_Y34_N17; Fanout = 3; REG Node = 'aft_clk'
+        Info: 3: + IC(0.768 ns) + CELL(0.000 ns) = 3.156 ns; Loc. = CLKCTRL_G10; Fanout = 32; COMB Node = 'aft_clk~clkctrl'
+        Info: 4: + IC(1.029 ns) + CELL(0.537 ns) = 4.722 ns; Loc. = LCFF_X24_Y18_N1; Fanout = 7; REG Node = 'given_money_temp[0]'
+        Info: Total cell delay = 2.303 ns ( 48.77 % )
+        Info: Total interconnect delay = 2.419 ns ( 51.23 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 2.569 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N1; Fanout = 8; PIN Node = 'SW[10]'
+        Info: 2: + IC(1.073 ns) + CELL(0.413 ns) = 2.485 ns; Loc. = LCCOMB_X24_Y18_N0; Fanout = 1; COMB Node = 'given_money_temp[0]~33'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 2.569 ns; Loc. = LCFF_X24_Y18_N1; Fanout = 7; REG Node = 'given_money_temp[0]'
+        Info: Total cell delay = 1.496 ns ( 58.23 % )
+        Info: Total interconnect delay = 1.073 ns ( 41.77 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 209 megabytes
+    Info: Processing ended: Sun Apr 01 09:56:10 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

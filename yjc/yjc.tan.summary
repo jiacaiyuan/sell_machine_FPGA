@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.797 ns
+From           : SW[17]
+To             : current_state.idle
+From Clock     : --
+To Clock       : CLOCK_27
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.295 ns
+From           : change_money[2]
+To             : HEX1[5]
+From Clock     : CLOCK_27
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.868 ns
+From           : SW[14]
+To             : LEDR[14]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.419 ns
+From           : SW[10]
+To             : given_money_temp[0]
+From Clock     : --
+To Clock       : CLOCK_27
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_27'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 298.78 MHz ( period = 3.347 ns )
+From           : given_money_temp[1]
+To             : given_money_temp[5]
+From Clock     : CLOCK_27
+To Clock       : CLOCK_27
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

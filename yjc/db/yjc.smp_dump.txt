@@ -1,0 +1,9 @@
+
+State Machine - |yjc|current_state
+Name current_state.deal_not current_state.deal_ok current_state.pay_ok current_state.pay current_state.choose current_state.idle 
+current_state.idle 0 0 0 0 0 0 
+current_state.choose 0 0 0 0 1 1 
+current_state.pay 0 0 0 1 0 1 
+current_state.pay_ok 0 0 1 0 0 1 
+current_state.deal_ok 0 1 0 0 0 1 
+current_state.deal_not 1 0 0 0 0 1 
